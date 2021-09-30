@@ -1,0 +1,1022 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  scroll-behavior: smooth;
+}
+
+p {
+  font-weight: 300;
+  color: #111;
+}
+
+/* body {
+  min-height: 1000px;
+} */
+.banner {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url(https://miro.medium.com/max/10368/1*f6I4VYUON_So1DPl35dblw.jpeg);
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.banner .content {
+  max-width: 900px;
+  text-align: center;
+}
+
+.banner .content h2 {
+  font-size: 5em;
+  color: #fff;
+}
+
+.banner .content p {
+  font-size: 1em;
+  color: #fff;
+}
+
+.btn {
+  font-size: 1em;
+  color: #fff;
+  background: #8c5139;
+  padding: 10px 30px;
+  display: inline-block;
+  margin-top: 20px;
+  text-transform: uppercase;
+  text-decoration: none;
+  letter-spacing: 2px;
+  transition: 0.5s;
+  border-radius: 2em;
+}
+
+.btn:hover {
+  letter-spacing: 6px;
+}
+
+.btn1 {
+  font-size: 1em;
+  color: #fff;
+  background: #8c5139;
+  padding: 10px 30px;
+  display: inline-block;
+  margin-top: 20px;
+  text-transform: uppercase;
+  text-decoration: none;
+  letter-spacing: 2px;
+  transition: 0.5s;
+  border-radius: 2em;
+}
+
+.btn1:hover {
+  letter-spacing: 6px;
+  color: #fff;
+}
+
+
+
+/* burger malecni */
+#menuToggle
+{
+  display: block;
+  position: relative;
+  top: 50px;
+  left: -420px;
+  
+  z-index: 1;
+  
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+#menuToggle a
+{
+  text-decoration: none;
+  color: #232323;
+  
+  transition: color 0.3s ease;
+}
+
+#menuToggle a:hover
+{
+  color: tomato;
+}
+
+
+#menuToggle input
+{
+  display: block;
+  width: 40px;
+  height: 32px;
+  position: absolute;
+  top: -7px;
+  left: -5px;
+  
+  cursor: pointer;
+  
+  opacity: 0; /* hide this */
+  z-index: 2; /* and place it over the hamburger */
+  
+  -webkit-touch-callout: none;
+}
+
+/*
+ * Just a quick hamburger
+ */
+#menuToggle span
+{
+  display: block;
+  width: 33px;
+  height: 4px;
+  margin-bottom: 5px;
+  position: relative;
+  
+  background: #cdcdcd00;
+  border-radius: 3px;
+  
+  z-index: 1;
+  
+  transform-origin: 4px 0px;
+  
+  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+              background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+              opacity 0.55s ease;
+}
+
+#menuToggle span:first-child
+{
+  transform-origin: 0% 0%;
+}
+
+#menuToggle span:nth-last-child(2)
+{
+  transform-origin: 0% 100%;
+}
+
+/* 
+ * Transform all the slices of hamburger
+ * into a crossmark.
+ */
+#menuToggle input:checked ~ span
+{
+  opacity: 1;
+  transform: rotate(45deg) translate(-2px, -1px);
+  background: #232323;
+}
+
+/*
+ * But let's hide the middle one.
+ */
+#menuToggle input:checked ~ span:nth-last-child(3)
+{
+  opacity: 0;
+  transform: rotate(0deg) scale(0.2, 0.2);
+}
+
+/*
+ * Ohyeah and the last one should go the other direction
+ */
+#menuToggle input:checked ~ span:nth-last-child(2)
+{
+  transform: rotate(-45deg) translate(0, -1px);
+}
+
+/*
+ * Make this absolute positioned
+ * at the top left of the screen
+ */
+#menu
+{
+  position: absolute;
+  width: 300px;
+  margin: -100px 0 0 -50px;
+  padding: 50px;
+  padding-top: 125px;
+  display:none;
+  
+  background: #ededed00;
+  list-style-type: none;
+  -webkit-font-smoothing: antialiased;
+  /* to stop flickering of text in safari */
+  
+  transform-origin: 0% 0%;
+  transform: translate(-100%, 0);
+  
+  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+}
+
+#menu li
+{
+  padding: 10px 0;
+  font-size: 22px;
+}
+
+/*
+ * And let's slide it in from the left
+ */
+#menuToggle input:checked ~ ul
+{
+  transform: none;
+}
+
+
+
+/* O nama Banner i ostale stvarcice */
+
+.banner-Onama {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url(/slike/kevidurant.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+
+.banner-Onama .content {
+  max-width: 900px;
+  text-align: center;
+}
+
+.banner-Onama .content h2 {
+  font-size: 5em;
+  color: #8c5139;
+}
+
+.banner-Onama .content p {
+  font-size: 1em;
+  color: #fff;
+}
+
+
+
+
+/* O nama google mapa */
+
+.about-Onama .row .co350 
+{
+  margin-bottom: 30px;
+}
+
+
+
+/* Benner Servisi */
+
+.banner-servisi {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url(/slike/bratbeli.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+
+.banner-servisi .content {
+  max-width: 900px;
+  text-align: center;
+}
+
+.banner-servisi .content h2 {
+  font-size: 5em;
+  color: #fff;
+}
+
+.banner-servisi .content p {
+  font-size: 1.5em;
+  color: #fff;
+}
+/* Medju divovi */
+
+.medjuslika
+{
+    width: 100%;
+    height: 300px;
+    background-image: url(/slike/medjudiv.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.medjuslika1
+{
+    width: 100%;
+    height: 300px;
+    background-image: url(/slike/medjudiv1.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.medjuslika2
+{
+    width: 100%;
+    height: 300px;
+    background-image: url(/slike/medjudiv2.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+
+.medjuslika3
+{
+    width: 100%;
+    height: 150px;
+    background-image: url(/slike/medjudiv3.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.medjuslika4
+{
+    width: 100%;
+    height: 150px;
+    background-image: url(/slike/medjudiv4.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.medjuslika5
+{
+    width: 100%;
+    height: 150px;
+    background-image: url(/slike/medjudiv5.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+
+.medjuslika6
+{
+    width: 100%;
+    height: 150px;
+    background-image: url(/slike/medjudiv2.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+
+
+
+
+/* GAlerija */
+
+#demo {
+  height:100%;
+  position:relative;
+  overflow:hidden;
+}
+
+
+.green{
+  background-color:#6fb936;
+}
+        .thumb{
+            margin-bottom: 30px;
+        }
+        
+        .page-top{
+            margin-top:85px;
+        }
+
+   
+img.zoom {
+    width: 100%;
+    height: 200px;
+    border-radius:5px;
+    object-fit:cover;
+    -webkit-transition: all .3s ease-in-out;
+    -moz-transition: all .3s ease-in-out;
+    -o-transition: all .3s ease-in-out;
+    -ms-transition: all .3s ease-in-out;
+}
+        
+ 
+.transition {
+    -webkit-transform: scale(1.2); 
+    -moz-transform: scale(1.2);
+    -o-transform: scale(1.2);
+    transform: scale(1.2);
+}
+    .modal-header {
+   
+     border-bottom: none;
+}
+    .modal-title {
+        color:#000;
+    }
+    .modal-footer{
+      display:none;  
+    }
+
+
+
+
+
+/*  */
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 40px 100px;
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: 0.5s;
+}
+
+header.sticky {
+  background: #fff;
+  padding: 10px 100px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
+}
+
+header .logo {
+  color: #fff;
+  font-weight: 700;
+  font-size: 3em;
+  text-decoration: none;
+}
+
+header.sticky .logo {
+  color: #111;
+}
+
+header .logo span {
+  color: #8c5139;
+}
+
+header .navigation {
+  position: relative;
+  display: flex;
+}
+
+header .navigation li {
+  list-style: none;
+  margin-left: 30px;
+}
+
+header .navigation li a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: 300;
+}
+
+header.sticky .navigation li a {
+  color: #111;
+}
+
+header .navigation li a:hover {
+  color: #8c5139;
+}
+
+section {
+  padding: 100px;
+}
+
+.row {
+  position: relative;
+  justify-content: space-between;
+  display: flex;
+  width: 100%;
+}
+
+.row .co150 {
+  position: relative;
+  width: 48%;
+}
+
+.titleText {
+  color: #111;
+  font-size: 2em;
+  font-weight: 300;
+}
+
+.titleText span {
+  color: #8c5139;
+  font-weight: 700;
+  font-size: 1.5em;
+}
+
+.row .co150 .imgBx {
+  position: relative;
+  width: 100%;
+  /* min-height: 300px; */
+  height: 100%;
+}
+
+.row .co150 .imgBx img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.title {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.service .content {
+  display: flex;
+  justify-content: center;
+  flex-direction: row-reverse;
+  flex-wrap: wrap;
+  margin-top: 40px;
+}
+
+.service .content .box {
+  width: 340px;
+  margin: 20px;
+  border: 15px solid #fff;
+  box-shadow: 0 5px 35px rgba(0, 0, 0, 0.08);
+}
+
+.service .content .box .imgBx {
+  position: relative;
+  width: 100%;
+  height: 300px;
+}
+
+.service .content .box .imgBx img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.service .content .box .text {
+  padding: 15px 0 5px;
+}
+
+.service .content .box .text h3 {
+  font-weight: 500;
+  color: #111;
+}
+
+.info .content {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  flex-direction: row;
+  margin-top: 40px;
+}
+
+.info .content .box {
+  width: 250px;
+  margin: 15px;
+}
+
+.info .content .box .imgBx {
+  position: relative;
+  width: 100%;
+  height: 300px;
+}
+
+.info .content .box .imgBx img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  box-shadow: 0 15px 50px rgb(0 0 0 / 80%);
+}
+
+.info .content .box .text {
+  padding: 15px 0 5px;
+}
+
+.info .content .box .text h3 {
+  font-weight: 400;
+  color: #111;
+}
+
+.testforma {
+  background-image: url(https://i.imgur.com/raoJti6.jpg);
+  background-size: cover;
+}
+
+.white .titleText,
+.white p {
+  color: #fff;
+}
+
+.testforma .content {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  flex-direction: row;
+  margin-top: 40px;
+}
+
+.testforma .content .box {
+  width: 340px;
+  margin: 20px;
+  padding: 40px;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  box-shadow: 0 15px 50px rgba(0, 0, 0, 0.8);
+}
+
+.testforma .content .box .imgBx {
+  position: relative;
+  width: 80px;
+  height: 80px;
+  margin-bottom: 20px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.testforma .content .box .imgBx img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.testforma .content .box .text {
+  text-align: center;
+}
+
+.testforma .content .box .text p {
+  color: #666;
+  font-style: italic;
+}
+
+.testforma .content .box .text h3 {
+  margin-top: 20px;
+  color: #111;
+  font-size: 1em;
+  color: #8c5139;
+  font-weight: 600;
+}
+
+.contact {
+  background-image: url(https://tech-camp.in/note/wp-content/uploads/%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%BC%E3%83%B3%E3%82%B7%E3%83%A7%E3%83%83%E3%83%88-2018-10-25-11.44.27.png);
+  background-size: cover;
+}
+
+.contactForm {
+  padding: 75px 50px;
+  background: #fff;
+  box-shadow: 0 15px 50px rgba(0, 0, 0, 0.8);
+  margin-top: 50px;
+  max-width: 500px;
+}
+
+.contactForm h3 {
+  color: #111;
+  font-size: 1.2em;
+  margin-bottom: 20px;
+  font-weight: 500;
+}
+
+.contactForm .inputBox {
+  position: relative;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.contactForm .inputBox input,
+.contactForm .inputBox textarea {
+  width: 100%;
+  border: 1px solid #555;
+  padding: 10px;
+  color: #111;
+  outline: none;
+  font-size: 16px;
+  font-weight: 300;
+  resize: none;
+}
+
+.contactForm .inputBox input[type="submit"] {
+  font-size: 1em;
+  color: #fff;
+  background: #8c5139;
+  display: inline-block;
+  text-transform: uppercase;
+  text-decoration: none;
+  letter-spacing: 2px;
+  transition: 0.5s;
+  max-width: 100px;
+  font-weight: 500;
+  border: none;
+  cursor: pointer;
+}
+
+.copyrightText {
+  padding: 8px 40px;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.copyrightText p {
+  color: #111;
+}
+
+.copyrightText a {
+  color: #8c5139;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+/* burger 
+....*/
+.brger li {
+  opacity: 0;
+  display: none;
+  right: 0px;
+}
+
+.burger {
+  display: none;
+  cursor: pointer;
+}
+
+.burger div {
+  width: 25px;
+  height: 3px;
+  background-color: whitesmoke;
+  margin: 5px;
+  border-radius: 7px;
+  transition: all 0.3s ease;
+}
+
+.nav-links {
+  display: flex;
+  justify-content: space-around;
+  width: 35%;
+}
+
+.nav-links li {
+  list-style: none;
+}
+
+.nav-links a {
+  text-decoration: none;
+  letter-spacing: 5px;
+  font-weight: bold;
+  font-size: 14px;
+  color: whitesmoke;
+}
+
+/* Responsive */
+
+@media screen and (max-width: 991px) {
+  header,
+  header.sticky {
+    padding: 10px 20px;
+  }
+  
+  #menu
+  {
+      display:block;
+      margin-left: -40px;
+  }
+
+  
+  
+
+  /*  kraj  burgera*/
+
+  header .navigation {
+    display: none;
+  }
+/* jos malo sredjivanja burgera*/ 
+  header .nav-links.active {
+    width: 100%;
+    height: calc(100% - 68px);
+    position: fixed;
+    top: 68;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: #fff;
+  }
+
+  header .nav-links li {
+    margin-left: 0;
+  }
+
+  header .nav-links li a {
+    color: #8c5139;
+    font-size: 1.6em;
+  }
+    
+    
+    /* dalje je responsive*/ 
+    
+    
+    section
+    {
+        padding: 20px;
+    }
+    
+    .banner .content h2
+    {
+        font-size: 3em;
+        color: #fff;
+    }
+    
+    .row
+    {
+        flex-direction: column;
+    }
+    
+    .row .co150
+    {
+        position: relative;
+        width: 100%;
+
+    }
+    
+    .row .co150 .imgBx
+    {
+        height: 300px;
+        margin-top: 20px;
+    }
+    
+    .service .content 
+    {
+        margin-top: 20px;
+    }
+    
+    .service .content .box
+    {
+        margin: 10px;
+    }
+    
+    .service .content .box .imgBx
+    {
+        height: 260px;
+    }
+    
+    .title
+    {
+        text-align: center;
+    }
+    
+    .titleText
+    {
+        margin-top:20px;
+        font-size: 1.8em;
+        line-height: 1.5em;
+        margin-bottom: 15px;
+        font-weight: 300;
+    }
+    
+    .row .ro150 .ro150 .titleText
+    {
+        margin-top:30px;
+    }
+    
+    .testforma .content .box
+    {
+        margin: 10px;
+        padding: 20px;
+    }
+    
+    
+    .contactForm
+    {
+        padding: 35px 40px;
+        margin-top: 20px;
+        margin-bottom: 30px;
+    }
+
+
+
+    /* kombinacija za bureger moj mehanizam */
+    #menu
+{
+
+  background: #ededed;
+  
+}
+
+#menuToggle span
+{
+  display: block;
+  width: 33px;
+  height: 4px;
+  margin-bottom: 5px;
+  position: relative;
+  
+  background: #8c5139;
+  
+}
+
+#menuToggle
+{
+  margin-top: 30px;
+  margin-left: -480px;
+}
+
+ 
+}
+
+@media screen and (max-width: 600px)
+
+{
+  #menuToggle
+  {
+    margin-left: 150px;
+  }
+  
+  #menu
+  {
+      display:block;
+  }
+
+}
+
+@media screen and (max-width: 480px)
+{
+  
+
+  #menuToggle
+{
+  margin-top: 30px;
+  margin-left: 130px;
+}
+
+#menu
+{
+   display: block;
+}
+
+    .banner .content
+    
+    {
+        margin-top:120px;
+    }
+    
+    .banner .content h2
+    {
+        font-size: 2.2em;
+        color: #fff;
+    }
+    
+    .banner-Onama .content h2
+    {
+      font-size: 3em;
+    }
+    
+    .banner-Onama .content
+    {
+        margin-top:120px;
+    }
+
+    .banner-servisi .content h2
+    {
+      font-size: 3em;
+    }
+
+    .banner-servisi .content
+    {
+      margin-top: 140px;
+    }
+}
+
+
